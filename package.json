@@ -1,0 +1,23 @@
+{
+  "name": "cypress-simple-starter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "cypress:open": "cypress open --e2e",
+    "cypress:run": "cypress run --e2e"
+  },
+  "devDependencies": {
+    "@types/node": "^24.7.1",
+    "@types/react": "^19.2.2",
+    "cypress": "^13.0.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "next": "^15.5.4",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  }
+}
