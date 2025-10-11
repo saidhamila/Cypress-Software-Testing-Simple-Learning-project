@@ -11,4 +11,18 @@ describe('Button Tests', () => {
     cy.get('[data-testid="primary-button"]').click()
     cy.get('[data-testid="click-count"]').should('contain', 'Clicked: 2 times')
   })
+
+  it('should toggle between ON and OFF states when toggle button is clicked', () => {
+    // Test toggle button
+    cy.get('[data-testid="toggle-button"]').should('be.visible').and('contain', 'OFF')
+    cy.get('[data-testid="toggle-state"]').should('contain', 'State: OFF')
+    
+    cy.get('[data-testid="toggle-button"]').click()
+    cy.get('[data-testid="toggle-button"]').should('contain', 'ON')
+    cy.get('[data-testid="toggle-state"]').should('contain', 'State: ON')
+
+    cy.get('[data-testid="toggle-button"]').click()
+    cy.get('[data-testid="toggle-button"]').should('contain', 'OFF')
+    cy.get('[data-testid="toggle-state"]').should('contain', 'State: OFF')
+  })
 })
