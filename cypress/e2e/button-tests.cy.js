@@ -25,4 +25,23 @@ describe('Button Tests', () => {
     cy.get('[data-testid="toggle-button"]').should('contain', 'OFF')
     cy.get('[data-testid="toggle-state"]').should('contain', 'State: OFF')
   })
+
+  it('should reset all button states when reset button is clicked', () => {
+    // First, change some states
+    cy.get('[data-testid="primary-button"]').click().click() // Click twice
+    cy.get('[data-testid="toggle-button"]').click() // Turn ON
+    
+    // Verify states changed
+    cy.get('[data-testid="click-count"]').should('contain', 'Clicked: 2 times')
+    cy.get('[data-testid="toggle-button"]').should('contain', 'ON')
+    cy.get('[data-testid="toggle-state"]').should('contain', 'State: ON')
+
+    // Test reset button
+    cy.get('[data-testid="reset-button"]').should('be.visible').click()
+    
+    // Verify everything is reset
+    cy.get('[data-testid="click-count"]').should('contain', 'Clicked: 0 times')
+    cy.get('[data-testid="toggle-button"]').should('contain', 'OFF')
+    cy.get('[data-testid="toggle-state"]').should('contain', 'State: OFF')
+  })
 })
