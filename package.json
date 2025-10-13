@@ -10,6 +10,7 @@
     "cypress:run": "cypress run --e2e"
   },
   "devDependencies": {
+    "@cypress/snapshot": "^2.1.1",
     "@types/node": "^24.7.1",
     "@types/react": "^19.2.2",
     "cypress": "^13.0.0",
