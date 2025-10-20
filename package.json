@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "cypress:open": "cypress open --e2e",
+    "tests:e2e": "cypress open --e2e",
     "cypress:run": "cypress run --e2e"
   },
   "devDependencies": {

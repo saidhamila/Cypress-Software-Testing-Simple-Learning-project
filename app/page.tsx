@@ -16,10 +16,10 @@ export default function Home() {
 
   return (
     <div style={{ padding: '2rem', fontFamily: 'Arial, sans-serif' }}>
-      <h1>Button Testing App</h1>
+      <h1>Button Testing App - MODIFIED</h1>
       
       <div style={{ marginBottom: '2rem' }}>
-        <h2>Primary Button</h2>
+        <h2>Pri Button</h2>
         <button 
           onClick={handlePrimaryClick}
           style={{
